@@ -1,0 +1,19 @@
+extends layout
+
+block content
+   h1= title
+   p Cadastro de Clientes
+   form(method="POST" action="" name="cadastroCliente")
+      .input-group
+         select(name="Tipo").form-control
+            option(value='1') Pessoa Física
+            option(value='2') Pessoa Jurídica
+      .input-group
+         label Nome
+         input(type="text" name="nome").form-control
+      .input-group
+         label Telefone
+         input(type="text" name="telefone").form-control
+      br
+      .input-group
+         button(type="submit").form-control Gravar
